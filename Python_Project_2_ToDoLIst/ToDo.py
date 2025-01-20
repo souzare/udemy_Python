@@ -7,4 +7,3 @@ todos = [todo1, todo2, todo3]
 print (todos)
 
 print(type(user_prompt))
-print("Size is ", len(user_prompt))
