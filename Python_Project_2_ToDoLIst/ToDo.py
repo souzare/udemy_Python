@@ -9,9 +9,8 @@ while True:
             todo = input("Enter a todo: ")
             todos.append(todo)
         case 'show':
-                for item in todos:
-                        item = item.title()
-                        print(item)
+                for index, item in enumerate(todos):
+                        print(index, "-", item)
         case 'edit':
                 number = int(input("Number of the todo to edit:"))
                 number = number - 1 ##aqui é para refletir exatamente o indici partido de 1
