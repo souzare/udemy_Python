@@ -5,14 +5,19 @@ while True:
     match user_action:
         case 'add':
             todo = input("Enter a todo: ") + "\n"
-            file = open("todos.txt", "r")
+            file = open("todos.txt", "r") ##aqui abre o arquivo em modo de leitura para que seja possível resgatar o conteúdo sem sobreescrevê-los
             todos = file.readlines()
+            file.close()
 
             todos.append(todo)
             
             file = open("todos.txt", "w") ##aqui abre o arquivo em modo de escrita
             file.writelines(todos) ##aqui escreve a lista no arquivo
+            file.close()
         case 'show':
+                file = open("todos.txt", "r")
+                todos = file.readlines()
+                file.close()
                 for index, item in enumerate(todos):
                         row = f"{index + 1}-{item}"
                         print(row)
